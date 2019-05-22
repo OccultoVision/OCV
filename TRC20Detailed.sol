@@ -12,16 +12,16 @@ import "./TRC20.sol";
  * extend from other ITRC20-based tokens:
  * https://github.com/OpenZeppelin/openzeppelin-solidity/issues/1536
  */
-contract OCV is TRC20 {
+contract OCV is TRC20 {
     string private _name;
     string private _symbol;
     uint8 private _decimals;
 
-    constructor (string name, string symbol, uint8 decimals, uint256 supply) public {
-        _name = name;
-        _symbol = symbol;
-        _decimals = decimals;
-        _mint(msg.sender, supply);
+    constructor () public {
+        _name = "Occulto Vision";
+        _symbol = "OCV";
+        _decimals = 6;
+        _mint(msg.sender, 1000000000000000);
     }
 
     /**
